@@ -47,6 +47,7 @@ public class Persona {
     @Override
     public String toString() {
         String estadoIMC;
+
         switch (calcularIMC()) {
             case -1:
                 estadoIMC = "Bajo peso";
@@ -61,7 +62,7 @@ public class Persona {
                 estadoIMC = "Estado desconocido";
         }
 
-
+        String esMayorDeEdad = this.esMayorDeEdad() ? "es mayor de edad" : "es menor de edad";
         return "La persona es: " +
                 nombre + ", " +
                 "dni: " + dni + ", " +
@@ -69,6 +70,6 @@ public class Persona {
                 "peso: " + peso + ", " +
                 "altura: " + altura + ", " +
                 "su IMC es: " + estadoIMC + ", " +
-                "¿Es mayor de edad?: " + this.esMayorDeEdad();
+                esMayorDeEdad;
     }
 }
