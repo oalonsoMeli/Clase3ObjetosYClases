@@ -47,7 +47,6 @@ public class Persona {
     @Override
     public String toString() {
         String estadoIMC;
-        String mayorDeEdad;
         switch (calcularIMC()) {
             case -1:
                 estadoIMC = "Bajo peso";
